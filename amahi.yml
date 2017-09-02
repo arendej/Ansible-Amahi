@@ -7,10 +7,13 @@
   vars_prompt:
     - name: "hda-ip"
       prompt: "What is the IP of your Amahi HDA server?"
+      private: no
     - name: "hda-user"
       prompt: "What username did you provide as your Amahi primary user?"
+      private: no
     - name: "hda-code"
       prompt: "What is the code provided by Amahi.org for your Amahi installation?"
+      private: no
   tasks:
     - name: "Check IP, show hostname"
     

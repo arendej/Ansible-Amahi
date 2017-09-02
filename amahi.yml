@@ -1,0 +1,29 @@
+--- # Ansible Amahi
+- hosts: {{hda-ip}}
+  become: yes
+  remote_user: {{hda-user}}
+  gather_facts: smart
+  connection: ssh
+  vars_prompt:
+    - name: "hda-ip"
+      prompt: "What is the IP of your Amahi HDA server?"
+    - name: "hda-user"
+      prompt: "What username did you provide as your Amahi primary user?"
+    - name: "hda-code"
+      prompt: "What is the code provided by Amahi.org for your Amahi installation?"
+  tasks:
+    - name: "Check IP, show hostname"
+    
+    - name: "Install hda-release (repo)"
+    
+    - name: "Install hda-ctl"
+    
+    - name: "Use install-code for setup"
+    
+    - name: "Add some usefull extra packages"
+    
+    - name: reboot
+      shell: reboot
+      async: 0
+      poll: 0
+      
